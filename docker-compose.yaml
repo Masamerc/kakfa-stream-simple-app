@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  stream-producer:
+      build: ./stream-producer
+      environment:
+        KAFKA_BROKER_URL: broker:9092
+
+networks:
+  default:
+    external:
+      name: streaming-network
